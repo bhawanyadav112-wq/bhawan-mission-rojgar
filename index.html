@@ -1,189 +1,278 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>BHAWAN NANGALIYA – Sarkari Result Style Portal</title>
-<meta name="description" content="Latest Govt Jobs, Admit Cards, Results, Answer Keys, Syllabus & Govt Schemes – Bhawan Nangaliya Mission Rojgar." />
+<title>BHAWAN NANGALIYA – Mission Rojgar | Latest Govt Jobs, Admit Card, Result, Yojana</title>
+<meta name="description" content="Bhawan Nangaliya Mission Rojgar – Sarkari Naukri updates, Admit Cards, Results, Answer Keys, Syllabus, Govt Schemes. Daily official links with fast navigation."/>
+<link rel="canonical" href="https://bhawanyadav112-wq.github.io/bhawan-mission-rojgar/"/>
+
+<!-- Basic SEO / Open Graph -->
+<meta property="og:title" content="BHAWAN NANGALIYA – Mission Rojgar"/>
+<meta property="og:description" content="Latest Jobs, Admit Cards, Results, Answer Keys, Syllabus & Govt Schemes with official links."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://bhawanyadav112-wq.github.io/bhawan-mission-rojgar/"/>
+
 <style>
-  :root{--brand:#b30000;--deep:#880000;--ink:#111;--link:#003399;--bg:#fff;--soft:#f6f6f6;--edge:#d9d9d9}
+  :root{
+    --brand:#b30000; --brand2:#8f0000; --ink:#121212; --link:#0b47c4;
+    --bg:#ffffff; --muted:#f7f7f7; --edge:#e5e5e5; --soft:#fff7d6;
+  }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Times New Roman", Georgia, serif}
-  .head{background:linear-gradient(#c41212,#a40d0d);color:#fff;text-align:center;padding:16px 10px;border-bottom:4px solid #5c0000;position:sticky;top:0;z-index:50}
-  .brand{font-size:40px;letter-spacing:1px;font-weight:700;text-transform:uppercase}
-  .tag{font-size:14px;opacity:.95;margin-top:4px}
-  .tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:10px;background:#fbe9e9;border-bottom:1px solid #e4bcbc}
-  .tab{padding:6px 10px;border:1px solid #cc7a7a;background:#fff;border-radius:3px;text-decoration:none;color:#900;font-weight:700;font-size:14px}
-  .tab.active{background:#ffe6e6}
-  .marq{background:#fff7d6;border-top:1px solid #e6d28a;border-bottom:1px solid #e6d28a;padding:6px 8px;font-weight:700}
-  .wrap{max-width:1100px;margin:14px auto;padding:0 10px}
-  .search{display:flex;gap:8px;align-items:center;margin:10px auto 14px;max-width:700px}
-  .search input{flex:1;padding:10px;border:2px solid var(--edge);border-radius:4px;font:16px "Times New Roman", Georgia, serif}
-  .search button{padding:10px 14px;border:2px solid var(--deep);background:var(--brand);color:#fff;font-weight:700;border-radius:4px}
-  .grid{display:grid;gap:14px;grid-template-columns:1fr}
-  @media(min-width:980px){.grid{grid-template-columns:1fr 1fr}}
-  .panel{border:3px solid var(--deep);border-radius:4px;background:#fff;overflow:hidden;box-shadow:0 1px 0 #cfcfcf}
-  .panel .hd{background:var(--brand);color:#fff;text-align:center;font-weight:800;padding:10px;font-size:26px;letter-spacing:.5px}
-  .panel .bd{padding:8px 10px 12px}
-  ul.list{margin:0;padding:0 12px 8px 22px}
-  ul.list li{margin:8px 0}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Times New Roman", Georgia, serif;scroll-behavior:smooth}
   a{color:var(--link);text-decoration:none}
   a:hover{text-decoration:underline}
+  /* Top social ribbon */
+  .topbar{display:flex;gap:10px;justify-content:center;align-items:center;padding:6px 10px;background:#ffe3e3;border-bottom:1px solid #e8b3b3}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1.5px solid #c46c6c;background:#fff;border-radius:20px;font-weight:700}
+  .chip svg{width:16px;height:16px}
+  /* Header */
+  .head{position:sticky;top:0;z-index:60;background:linear-gradient(#c41212,#a50f0f);color:#fff;border-bottom:4px solid #5c0000}
+  .head .wrap{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 10px}
+  .brand{font-size:40px;font-weight:800;letter-spacing:1px;text-transform:uppercase;text-align:center}
+  .tag{font-size:14px;opacity:.95}
+  /* Nav */
+  .tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:10px;background:#fbe9e9;border-top:1px solid #e9c2c2;border-bottom:1px solid #e9c2c2}
+  .tab{padding:7px 12px;border:1px solid #cc7a7a;background:#fff;border-radius:3px;color:#900;font-weight:800}
+  .tab.active{background:#ffe6e6}
+  /* Notice */
+  .marq{background:var(--soft);border-top:1px solid #e6d28a;border-bottom:1px solid #e6d28a;padding:6px 10px;font-weight:800}
+  /* Layout */
+  .container{max-width:1150px;margin:14px auto;padding:0 10px}
+  .search{display:flex;gap:8px;align-items:center;margin:10px auto 16px;max-width:780px}
+  .search input{flex:1;padding:10px;border:2px solid var(--edge);border-radius:4px;font:16px "Times New Roman", Georgia, serif}
+  .search button{padding:10px 14px;border:2px solid #5c0000;background:var(--brand);color:#fff;font-weight:800;border-radius:4px}
+  .grid{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:980px){.grid{grid-template-columns:1fr 1fr}}
+  /* Panel */
+  .panel{border:3px solid var(--brand2);border-radius:4px;background:#fff;overflow:hidden;box-shadow:0 1px 0 #cecece}
+  .panel .hd{background:var(--brand);color:#fff;text-align:center;font-weight:900;padding:10px;font-size:26px;letter-spacing:.5px}
+  .panel .bd{padding:8px 10px 12px}
+  ul.list{margin:0;padding:0 12px 10px 22px}
+  ul.list li{margin:8px 0}
   .pill{display:inline-block;margin-left:6px;padding:1px 7px;background:#eef3ff;border:1px solid #c9d9ff;border-radius:10px;font:12px/18px system-ui,Segoe UI,Arial,sans-serif;color:#2747b9}
-  .badge{color:#008a00;border:1px solid #aad3aa;background:#ecffec;border-radius:10px;padding:2px 8px;font:12px/18px system-ui}
+  .badge{color:#078407;border:1px solid #aad3aa;background:#ecffec;border-radius:10px;padding:2px 8px;font:12px/18px system-ui}
   .danger{color:#b30000;border-color:#f2c1c1;background:#fff1f1}
+  /* Details cards */
   details{border:1px solid #e6e6e6;border-radius:6px;background:#fff;margin:10px 0}
-  details summary{cursor:pointer;padding:12px 12px;font-weight:700}
-  details .inside{padding:0 14px 12px}
+  details summary{cursor:pointer;padding:12px 12px;font-weight:900}
+  details .inside{padding:0 14px 12px 14px}
   .table{width:100%;border-collapse:collapse}
   .table th,.table td{border:1px solid #ddd;padding:8px}
   .table th{background:#f5f5f5;text-align:left}
-  footer{text-align:center;padding:18px 10px;margin-top:18px;border-top:4px solid var(--deep);background:#fafafa;font-weight:700}
+  /* Floating social left */
+  .floatbar{position:fixed;left:8px;top:35%;z-index:70;display:flex;flex-direction:column;gap:8px}
+  .floatbar a{display:flex;align-items:center;gap:8px;background:#fff;border:2px solid #d0d0d0;padding:8px 10px;border-radius:14px;font-weight:800;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+  .floatbar .yt{border-color:#ffb2b2}
+  .floatbar .ig{border-color:#ffcfb2}
+  .floatbar .grp{border-color:#b2e0ff}
+  .floatbar svg{width:18px;height:18px}
+  @media(max-width:920px){.floatbar{display:none}}
+  /* Bottom sticky social (mobile) */
+  .bottombar{position:fixed;bottom:0;left:0;right:0;background:#fffffff2;border-top:1px solid #e2e2e2;backdrop-filter:blur(6px);z-index:75;display:flex;justify-content:space-around;padding:8px 6px}
+  .bottombar a{display:flex;flex-direction:column;align-items:center;font:12px/1.1 system-ui,Segoe UI,Arial,sans-serif;font-weight:700;color:#222}
+  .bottombar svg{width:22px;height:22px;margin-bottom:3px}
+  @media(min-width:921px){.bottombar{display:none}}
+  /* Footer */
+  footer{text-align:center;padding:20px 10px;margin:70px 0 60px;border-top:4px solid var(--brand2);background:#fafafa;font-weight:900}
+  footer .links a{margin:0 6px}
+  /* Ad slots (placeholder) */
+  .ad{margin:10px auto;padding:10px;text-align:center;border:2px dashed #dddddd;background:#fbfbfb;border-radius:6px;color:#777;font-weight:700}
 </style>
 </head>
 <body>
 
+<!-- Top repeating social -->
+<div class="topbar" aria-label="Social quick links">
+  <a class="chip" href="https://youtube.com/@bhawan-missionrozgar" target="_blank" rel="noopener">
+    <!-- YouTube icon -->
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a4 4 0 0 0-2.8-2.9C18.9 2.7 12 2.7 12 2.7s-6.9 0-8.7.6A4 4 0 0 0 .5 6.2 41.4 41.4 0 0 0 0 12a41.4 41.4 0 0 0 .5 5.8 4 4 0 0 0 2.8 2.9c1.8.6 8.7.6 8.7.6s6.9 0 8.7-.6a4 4 0 0 0 2.8-2.9A41.4 41.4 0 0 0 24 12a41.4 41.4 0 0 0-.5-5.8zM9.6 15.3V8.7L16 12l-6.4 3.3z"/></svg>
+    YouTube
+  </a>
+  <a class="chip" href="https://www.instagram.com/bhawan_yaduvanshi30" target="_blank" rel="noopener">
+    <!-- Instagram icon -->
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.8a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+    Instagram
+  </a>
+  <a class="chip" href="https://chat.whatsapp.com/your-group-invite" target="_blank" rel="noopener">
+    <!-- Group icon -->
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4zM7 13a3.5 3.5 0 1 0-3.5-3.5A3.5 3.5 0 0 0 7 13zm9 1c-2.7 0-8 1.4-8 4.1V21h16v-2.9C24 15.4 18.7 14 16 14zM7 14c-2.3 0-7 1.2-7 3.7V21h7"/></svg>
+    Join Group
+  </a>
+</div>
+
 <header class="head">
-  <div class="brand">BHAWAN NANGALIYA</div>
-  <div class="tag">Mission Rojgar • Sarkari Jobs • Admit Card • Result • Yojana</div>
+  <div class="wrap">
+    <div class="brand">BHAWAN NANGALIYA</div>
+    <div class="tag">Mission Rojgar • Latest Jobs • Admit Card • Results • Answer Keys • Syllabus • Govt Schemes</div>
+  </div>
+  <nav class="tabs" aria-label="Primary">
+    <a class="tab active" href="#jobs">Latest Jobs</a>
+    <a class="tab" href="#admit">Admit Cards</a>
+    <a class="tab" href="#results">Results</a>
+    <a class="tab" href="#answer">Answer Keys</a>
+    <a class="tab" href="#syllabus">Syllabus</a>
+    <a class="tab" href="#schemes">Govt Schemes</a>
+  </nav>
 </header>
 
-<nav class="tabs">
-  <a class="tab active" href="#jobs">Latest Jobs</a>
-  <a class="tab" href="#admit">Admit Cards</a>
-  <a class="tab" href="#results">Results</a>
-  <a class="tab" href="#answer">Answer Keys</a>
-  <a class="tab" href="#syllabus">Syllabus</a>
-  <a class="tab" href="#schemes">Govt Schemes</a>
-</nav>
+<!-- Floating social (left desktop) -->
+<div class="floatbar" aria-label="Sticky Social">
+  <a class="yt" href="https://youtube.com/@bhawan-missionrozgar" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a4 4 0 0 0-2.8-2.9C18.9 2.7 12 2.7 12 2.7s-6.9 0-8.7.6A4 4 0 0 0 .5 6.2 41.4 41.4 0 0 0 0 12a41.4 41.4 0 0 0 .5 5.8 4 4 0 0 0 2.8 2.9c1.8.6 8.7.6 8.7.6s6.9 0 8.7-.6a4 4 0 0 0 2.8-2.9A41.4 41.4 0 0 0 24 12a41.4 41.4 0 0 0-.5-5.8zM9.6 15.3V8.7L16 12l-6.4 3.3z"/></svg>
+    YouTube
+  </a>
+  <a class="ig" href="https://www.instagram.com/bhawan_yaduvanshi30" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.8a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+    Instagram
+  </a>
+  <a class="grp" href="https://chat.whatsapp.com/your-group-invite" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.9 14.6L2 22l5.6-1.5A10 10 0 1 0 12 2zm5.8 14.1c-.3.9-1.7 1.7-2.4 1.7-.6 0-1.3-.2-2.3-.7-3.9-2-6.3-6-6.5-6.3-.2-.3-1.5-2-1.5-3.4 0-1.4.8-2.1 1.2-2.4.3-.2.7-.3 1-.3h.7c.2 0 .5 0 .7.6.3.7 1 2.4 1.1 2.6.1.3.1.5 0 .7-.2.4-.5.8-.7 1-.1.1-.2.3 0 .6.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.1.5.1.7 0 .2-.1 1.1-1.2 1.4-1.6.3-.3.6-.3.9-.2.4.1 2.3 1.1 2.6 1.3.2.1.4.2.5.4.2.2.2.6.1.8z"/></svg>
+    Join Group
+  </a>
+</div>
 
-<div class="marq">🔔 Official links included. Naye updates add karne ke liye neeche “DATA” arrays me item add karein.</div>
+<div class="marq">🔔 Important: Official links included. Data updated regularly. Insta/YouTube/Group links sab jagah diye gaye hain.</div>
 
-<section class="wrap">
-  <div class="search">
-    <input id="q" type="search" placeholder="Search (e.g. IBPS, BSSC, Railway, Scholarship, Yojana)..." />
+<main class="container">
+  <!-- Search -->
+  <div class="search" role="search">
+    <input id="q" type="search" placeholder="Search (e.g. IBPS, SSC, Railway, Scholarship, Yojana)..." aria-label="Search jobs and updates"/>
     <button onclick="doSearch()">Search</button>
   </div>
 
+  <!-- Ad slot (optional) -->
+  <div class="ad">Ad Space (336×280 / Auto) – Add AdSense later</div>
+
   <div class="grid">
-    <div id="jobs" class="panel"><div class="hd">Latest Jobs</div><div class="bd"><ul class="list" id="list-jobs"></ul></div></div>
-    <div id="admit" class="panel"><div class="hd">Admit Cards</div><div class="bd"><ul class="list" id="list-admit"></ul></div></div>
-    <div id="results" class="panel"><div class="hd">Results</div><div class="bd"><ul class="list" id="list-results"></ul></div></div>
-    <div id="answer" class="panel"><div class="hd">Answer Keys</div><div class="bd"><ul class="list" id="list-keys"></ul></div></div>
-    <div id="syllabus" class="panel"><div class="hd">Syllabus</div><div class="bd"><ul class="list" id="list-syllabus"></ul></div></div>
-    <div id="schemes" class="panel"><div class="hd">Govt Schemes</div><div class="bd"><ul class="list" id="list-schemes"></ul></div></div>
+    <!-- Latest Jobs -->
+    <section id="jobs" class="panel" aria-labelledby="h-jobs">
+      <div class="hd" id="h-jobs">Latest Jobs</div>
+      <div class="bd"><ul class="list" id="list-jobs"></ul></div>
+    </section>
+
+    <!-- Admit Cards -->
+    <section id="admit" class="panel" aria-labelledby="h-admit">
+      <div class="hd" id="h-admit">Admit Cards</div>
+      <div class="bd"><ul class="list" id="list-admit"></ul></div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="panel" aria-labelledby="h-results">
+      <div class="hd" id="h-results">Results</div>
+      <div class="bd"><ul class="list" id="list-results"></ul></div>
+    </section>
+
+    <!-- Answer Keys -->
+    <section id="answer" class="panel" aria-labelledby="h-answer">
+      <div class="hd" id="h-answer">Answer Keys</div>
+      <div class="bd"><ul class="list" id="list-keys"></ul></div>
+    </section>
+
+    <!-- Syllabus -->
+    <section id="syllabus" class="panel" aria-labelledby="h-syll">
+      <div class="hd" id="h-syll">Syllabus</div>
+      <div class="bd"><ul class="list" id="list-syllabus"></ul></div>
+    </section>
+
+    <!-- Govt Schemes -->
+    <section id="schemes" class="panel" aria-labelledby="h-schemes">
+      <div class="hd" id="h-schemes">Govt Schemes</div>
+      <div class="bd"><ul class="list" id="list-schemes"></ul></div>
+    </section>
   </div>
 
   <div id="details"></div>
-</section>
+
+  <!-- Ad slot -->
+  <div class="ad">Ad Space (Responsive)</div>
+</main>
 
 <footer>
-  © 2025 BHAWAN NANGALIYA — Mission Rojgar. |
-  <a href="https://instagram.com/bhawan_yaduvanshi30" target="_blank">Instagram</a> •
-  <a href="https://youtube.com/@bhawan-missionrozgar" target="_blank">YouTube</a>
+  <div class="links" aria-label="Social">
+    <a href="https://youtube.com/@bhawan-missionrozgar" target="_blank" rel="noopener">YouTube</a> •
+    <a href="https://www.instagram.com/bhawan_yaduvanshi30" target="_blank" rel="noopener">Instagram</a> •
+    <a href="https://chat.whatsapp.com/your-group-invite" target="_blank" rel="noopener">Join Group</a>
+  </div>
+  <div style="margin-top:8px">
+    © 2025 <b>BHAWAN NANGALIYA</b> — Mission Rojgar. All Rights Reserved. |
+    <a href="#contact">Contact</a> • <a href="#disclaimer">Disclaimer</a> • <a href="#privacy">Privacy</a>
+  </div>
 </footer>
+
+<!-- Bottom sticky social (mobile) -->
+<nav class="bottombar" aria-label="Quick social">
+  <a href="https://youtube.com/@bhawan-missionrozgar" target="_blank" rel="noopener" aria-label="YouTube">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a4 4 0 0 0-2.8-2.9C18.9 2.7 12 2.7 12 2.7s-6.9 0-8.7.6A4 4 0 0 0 .5 6.2 41.4 41.4 0 0 0 0 12a41.4 41.4 0 0 0 .5 5.8 4 4 0 0 0 2.8 2.9c1.8.6 8.7.6 8.7.6s6.9 0 8.7-.6a4 4 0 0 0 2.8-2.9A41.4 41.4 0 0 0 24 12a41.4 41.4 0 0 0-.5-5.8zM9.6 15.3V8.7L16 12l-6.4 3.3z"/></svg>
+    YouTube
+  </a>
+  <a href="https://www.instagram.com/bhawan_yaduvanshi30" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.8a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+    Insta
+  </a>
+  <a href="https://chat.whatsapp.com/your-group-invite" target="_blank" rel="noopener" aria-label="Group">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.9 14.6L2 22l5.6-1.5A10 10 0 1 0 12 2zm5.8 14.1c-.3.9-1.7 1.7-2.4 1.7-.6 0-1.3-.2-2.3-.7-3.9-2-6.3-6-6.5-6.3-.2-.3-1.5-2-1.5-3.4 0-1.4.8-2.1 1.2-2.4.3-.2.7-.3 1-.3h.7c.2 0 .5 0 .7.6.3.7 1 2.4 1.1 2.6.1.3.1.5 0 .7-.2.4-.5.8-.7 1-.1.1-.2.3 0 .6.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.1.5.1.7 0 .2-.1 1.1-1.2 1.4-1.6.3-.3.6-.3.9-.2.4.1 2.3 1.1 2.6 1.3.2.1.4.2.5.4.2.2.2.6.1.8z"/></svg>
+    Group
+  </a>
+</nav>
+
+<!-- =========================
+     Structured Data (SEO)
+     ========================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"BHAWAN NANGALIYA – Mission Rojgar",
+  "url":"https://bhawanyadav112-wq.github.io/bhawan-mission-rojgar/",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://bhawanyadav112-wq.github.io/bhawan-mission-rojgar/?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
 
 <script>
 /* ===========================
-   DATA (edit only this part)
+   DATA (Edit only here)
    =========================== */
-
-// JOBS (example 15+)
+// Jobs (sample packed list; add more by copying objects)
 const JOBS = [
   {id:'ibps-clerk', title:'IBPS Clerk XV Online Form 2025', tag:'Bank', last:'28 Aug 2025', status:'Open',
-    details:{
-      rows:[
-        ['Application Begin','01 Aug 2025'],
-        ['Last Date','28 Aug 2025'],
-        ['Age','20–28 years (as on 01-08-2025)'],
-        ['Total Post','10277'],
-        ['Qualification','Graduate'],
-        ['Fee','UR/OBC/EWS ₹850 • SC/ST ₹175 • Online']
-      ],
-      links:[
-        ['Official Website','https://ibps.in'],
-        ['Apply Online','#'],
-        ['Notification','#'],
-        ['Syllabus','#']
-      ]
-    }
-  },
+    details:{rows:[['Application Begin','01 Aug 2025'],['Last Date','28 Aug 2025'],['Age','20–28 years'],['Total Post','10277'],['Qualification','Graduate'],['Fee','UR/OBC/EWS ₹850 • SC/ST ₹175']],
+      links:[['Official Website','https://ibps.in'],['Apply Online','#'],['Notification','#'],['Syllabus','#']]}},
   {id:'bssc-cgl', title:'BSSC CGL-4 Recruitment 2025', tag:'Bihar', last:'TBA', status:'Upcoming',
-    details:{
-      rows:[
-        ['State','Bihar'],['Status','To be announced'],['Qualification','Graduate Level Posts (Dept-wise)']
-      ],
-      links:[['Official Website','https://bssc.bihar.gov.in/'],['Notification','#']]
-    }
-  },
+    details:{rows:[['State','Bihar'],['Qualification','Graduate Level']],links:[['BSSC Official','https://bssc.bihar.gov.in/']]}},
   {id:'ssc-mts', title:'SSC MTS / Havaldar 2025', tag:'Central', last:'TBA', status:'Upcoming',
-    details:{rows:[['Commission','SSC'],['Qualification','10th Pass'],['Status','Apply Soon']],links:[['Official Website','https://ssc.gov.in']]}
-  },
+    details:{rows:[['Commission','SSC'],['Qualification','10th Pass']],links:[['SSC','https://ssc.gov.in']]}},
   {id:'rrb-tech', title:'Railway RRB Technician 2025', tag:'Railway', last:'TBA', status:'Upcoming',
-    details:{rows:[['Board','Railway Recruitment Board'],['Qualification','ITI/Diploma'],['Status','Expected']],links:[['RRB (Chandigarh Portal)','https://rrbcdg.gov.in/']]}
-  },
-  {id:'upsssc-lekpal', title:'UPSSSC Lekhpal 2025', tag:'UP', last:'TBA', status:'Upcoming',
-    details:{rows:[['Board','UPSSSC'],['Qualification','12th/Graduate (as per notice)']],links:[['Official Website','https://upsssc.gov.in/']]}
-  },
-  {id:'fci-ag3', title:'FCI Assistant Grade III 2025', tag:'FCI', last:'TBA', status:'Upcoming',
-    details:{rows:[['Org','Food Corporation of India'],['Qualification','Graduate + Computer']],links:[['Official','https://fci.gov.in/']]}
-  },
-  {id:'india-post-gds', title:'India Post GDS 2025', tag:'Postal', last:'TBA', status:'Upcoming',
-    details:{rows:[['Org','Department of Posts'],['Qualification','10th Pass']],links:[['Official GDS','https://indiapostgdsonline.gov.in/']]}
-  },
-  {id:'army-agniveer', title:'Indian Army Agniveer 2025', tag:'Defence', last:'TBA', status:'Upcoming',
-    details:{rows:[['Force','Indian Army'],['Mode','Online']],links:[['Join Indian Army','https://joinindianarmy.nic.in/']]}
-  },
-  {id:'airforce-agniveer', title:'Air Force Agniveer Vayu 2025', tag:'Defence', last:'TBA', status:'Upcoming',
-    details:{rows:[['Force','IAF'],['Age','As per notice']],links:[['Agnipath IAF','https://agnipathvayu.cdac.in/']]}
-  },
-  {id:'navy-ssr', title:'Indian Navy SSR/MR 2025', tag:'Navy', last:'TBA', status:'Upcoming',
-    details:{rows:[['Force','Indian Navy']],links:[['Join Navy','https://www.joinindiannavy.gov.in/']]}
-  },
-  {id:'state-police', title:'Rajasthan Police Constable 2025', tag:'Rajasthan', last:'TBA', status:'Upcoming',
-    details:{rows:[['Dept','Rajasthan Police']],links:[['Police Portal','https://www.police.rajasthan.gov.in/']]}
-  },
-  {id:'ibps-po', title:'IBPS PO XV 2025', tag:'Bank', last:'TBA', status:'Upcoming',
-    details:{rows:[['Organisation','IBPS'],['Qualification','Graduate']],links:[['Official','https://ibps.in']]}
-  },
-  {id:'sbi-clerk', title:'SBI Clerk 2025', tag:'Bank', last:'TBA', status:'Upcoming',
-    details:{rows:[['Bank','SBI'],['Qualification','Graduate']],links:[['SBI Careers','https://sbi.co.in/web/careers']]}
-  },
-  {id:'upsc-epfo', title:'UPSC EPFO/EO 2025', tag:'UPSC', last:'TBA', status:'Upcoming',
-    details:{rows:[['Commission','UPSC']],links:[['UPSC Online','https://upsconline.nic.in/']]}
-  },
+    details:{rows:[['Board','RRB'],['Qualification','ITI/Diploma']],links:[['RRB Chandigarh','https://rrbcdg.gov.in/']]}},
   {id:'ctet', title:'CTET 2025', tag:'Teaching', last:'TBA', status:'Upcoming',
-    details:{rows:[['Board','CBSE']],links:[['CTET','https://ctet.nic.in/']]}
-  }
+    details:{rows:[['Board','CBSE']],links:[['CTET','https://ctet.nic.in/']]}}
 ];
 
-// ADMIT CARDS
 const ADMITS = [
   ['UPSSSC PET Exam City Details 2025 – Out','https://upsssc.gov.in/'],
-  ['RRB NTPC/Level Exam City – Out','https://rrbcdg.gov.in/'],
   ['Bank Of Baroda LBO Admit Card 2025 – Out','https://www.bankofbaroda.in/'],
-  ['SSC Phase-13 Re-Exam Admit Card 2025 – Out','https://ssc.gov.in/'],
+  ['SSC Phase-13 Admit Card 2025 – Out','https://ssc.gov.in/'],
   ['AIIMS CRE Group B,C Admit Card 2025 – Out','https://www.aiimsexams.ac.in/']
 ];
 
-// RESULTS
 const RESULTS = [
   ['SSC JHT 2024 Marks – Out','#'],
   ['Railway RPF SI Final Result 2025 – Out','#'],
   ['BSPHCL Assistant Engineer GTO Result 2025 – Out','#'],
-  ['BCECE 2025 2nd Round Allotment – Out','#'],
-  ['RSMSSB LDC/Junior Assistant Result – Out','#']
+  ['BCECE 2025 2nd Round Allotment – Out','#']
 ];
 
-// ANSWER KEYS
 const ANSWERS = [
   ['BPSC MVI Answer Key 2025 – Out','https://www.bpsc.bih.nic.in/'],
-  ['BPSC DSO/AD Answer Key 2025 – Out','https://www.bpsc.bih.nic.in/'],
   ['DSSSB 05–14 Aug Answer Key 2025 – Out','https://dsssb.delhi.gov.in/'],
   ['JPSC ACF Pre Revised Answer Key 2025 – Out','https://www.jpsc.gov.in/']
 ];
 
-// SYLLABUS
 const SYLLABUS = [
   ['SSC CPO SI Paper-I Syllabus 2025','#'],
   ['IBPS Clerk Syllabus 2025 (Pre + Main)','#'],
@@ -191,7 +280,6 @@ const SYLLABUS = [
   ['UP Police SI Syllabus 2025','#']
 ];
 
-// SCHEMES (official)
 const SCHEMES = [
   ['PM-KISAN','https://pmkisan.gov.in/'],
   ['National Career Service (NCS)','https://www.ncs.gov.in/'],
@@ -202,60 +290,64 @@ const SCHEMES = [
 ];
 
 /* ===========================
-   RENDER
+   RENDER HELPERS
    =========================== */
+const $ = s=>document.querySelector(s);
 
-const el = s=>document.querySelector(s);
+function liLink(text, href='#', extra=''){ return `<li><a href="${href}" target="_blank" rel="noopener">${text}</a>${extra}</li>`; }
 
 function renderLists(){
-  // Jobs
-  const ulJ = el('#list-jobs'); ulJ.innerHTML = '';
+  // Jobs list + details
+  const ulJ = $('#list-jobs'); const detWrap = $('#details');
+  ulJ.innerHTML=''; detWrap.innerHTML='';
   JOBS.forEach(j=>{
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="#${j.id}" onclick="openDetails('${j.id}')">${j.title}</a>
-      <span class="pill">${j.tag}</span>
-      <span class="pill">Last: ${j.last}</span>
-      <span class="badge ${/Open/i.test(j.status)?'':'danger'}">${j.status}</span>`;
-    ulJ.appendChild(li);
+    const statusClass = /Open/i.test(j.status) ? 'badge' : 'badge danger';
+    ulJ.insertAdjacentHTML('beforeend',
+      `<li><a href="#${j.id}" onclick="openDetails('${j.id}')">${j.title}</a>
+        <span class="pill">${j.tag}</span>
+        <span class="pill">Last: ${j.last}</span>
+        <span class="${statusClass}">${j.status}</span></li>`);
 
-    // details block
-    const det = document.createElement('details');
-    det.id = j.id;
     const rows = (j.details?.rows||[]).map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join('');
-    const links = (j.details?.links||[]).map(l=>`<li>👉 <a href="${l[1]}" target="_blank">${l[0]}</a></li>`).join('');
-    det.innerHTML = `<summary>${j.title}: Full Details (click to open)</summary>
-      <div class="inside">
-        <table class="table">${rows}</table>
-        ${links?`<p><b>Important Links:</b></p><ul class="list">${links}</ul>`:''}
-      </div>`;
-    el('#details').appendChild(det);
+    const links = (j.details?.links||[]).map(l=>liLink(l[0], l[1])).join('');
+    detWrap.insertAdjacentHTML('beforeend',
+      `<details id="${j.id}"><summary>${j.title}: Full Details (click to open)</summary>
+        <div class="inside">
+          <div class="ad">Ad Space</div>
+          <table class="table">${rows}</table>
+          ${links?`<p><b>Important Links:</b></p><ul class="list">${links}</ul>`:''}
+          <p><b>Follow:</b> <a href="https://youtube.com/@bhawan-missionrozgar" target="_blank">YouTube</a> •
+          <a href="https://www.instagram.com/bhawan_yaduvanshi30" target="_blank">Instagram</a> •
+          <a href="https://chat.whatsapp.com/your-group-invite" target="_blank">Join Group</a></p>
+        </div>
+      </details>`);
   });
 
-  // Other lists
-  fillSimple('#list-admit', ADMITS);
-  fillSimple('#list-results', RESULTS);
-  fillSimple('#list-keys', ANSWERS);
-  fillSimple('#list-syllabus', SYLLABUS);
-  fillSimple('#list-schemes', SCHEMES, true);
+  fill('#list-admit', ADMITS);
+  fill('#list-results', RESULTS);
+  fill('#list-keys', ANSWERS);
+  fill('#list-syllabus', SYLLABUS);
+  fill('#list-schemes', SCHEMES, true);
 }
-function fillSimple(sel, arr, blankTarget){
-  const ul = el(sel); ul.innerHTML='';
+
+function fill(sel, arr, blankTarget){
+  const ul = $(sel); ul.innerHTML='';
   arr.forEach(([text,href='#'])=>{
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="${href}" ${blankTarget?'target="_blank"':''}>${text}</a>`;
-    ul.appendChild(li);
+    ul.insertAdjacentHTML('beforeend', `<li><a href="${href}" ${blankTarget?'target="_blank" rel="noopener"':''}>${text}</a></li>`);
   });
 }
 
+/* ===========================
+   UI Behavior
+   =========================== */
 function doSearch(){
-  const q = el('#q').value.trim().toLowerCase();
-  ['list-jobs','list-admit','list-results','list-keys','list-syllabus','list-schemes']
-    .forEach(id=>{
-      document.querySelectorAll('#'+id+' li').forEach(li=>{
-        const hit = li.innerText.toLowerCase().includes(q);
-        li.style.display = (q==='' || hit) ? '' : 'none';
-      });
+  const q = $('#q').value.trim().toLowerCase();
+  ['list-jobs','list-admit','list-results','list-keys','list-syllabus','list-schemes'].forEach(id=>{
+    document.querySelectorAll('#'+id+' li').forEach(li=>{
+      const hit = li.innerText.toLowerCase().includes(q);
+      li.style.display = (q==='' || hit) ? '' : 'none';
     });
+  });
   if(q!==''){ location.hash = '#jobs'; }
 }
 
@@ -276,6 +368,32 @@ window.addEventListener('scroll',()=>{
 
 renderLists();
 </script>
+
+<!-- Lightweight anchor sections for footer links -->
+<section id="contact" class="container" style="margin-top:10px">
+  <details open>
+    <summary style="font-weight:900">Contact</summary>
+    <div class="inside">
+      Business/Collab: <b>bhawan-missionrozgar</b> (DM on
+      <a href="https://www.instagram.com/bhawan_yaduvanshi30" target="_blank">Instagram</a>) |
+      YouTube: <a href="https://youtube.com/@bhawan-missionrozgar" target="_blank">@bhawan-missionrozgar</a> |
+      Group: <a href="https://chat.whatsapp.com/your-group-invite" target="_blank">Join Group</a>
+    </div>
+  </details>
+  <details id="disclaimer">
+    <summary style="font-weight:900">Disclaimer</summary>
+    <div class="inside">
+      हम सटीक व आधिकारिक जानकारी देने की कोशिश करते हैं। कृपया आवेदन करने से पहले संबंधित
+      <b>Official Website / Notification PDF</b> अवश्य पढ़ें। किसी भी त्रुटि के लिए साइट जिम्मेदार नहीं होगी।
+    </div>
+  </details>
+  <details id="privacy">
+    <summary style="font-weight:900">Privacy Policy</summary>
+    <div class="inside">
+      यह साइट ब्राउज़र कुकीज़/एनेलिटिक्स का प्रयोग कर सकती है ताकि अनुभव बेहतर हो। हम आपकी निजी जानकारी नहीं बेचते।
+    </div>
+  </details>
+</section>
 
 </body>
 </html>
