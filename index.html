@@ -1,412 +1,280 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bhawan NANGALIYA – Mission Rojgar</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BHAWAN NANGALIYA – Sarkari Result Style Portal</title>
+<meta name="description" content="Latest Govt Jobs, Admit Cards, Results, Answer Keys, Syllabus & Govt Schemes – Bhawan Nangaliya Mission Rojgar." />
 <style>
-  :root{
-    --pri:#0a6cf1; --pri-dark:#084bb0; --acc:#ff4757; --ok:#09c372; --bg:#f5f7fb; --card:#fff; --text:#222;
-    --muted:#667085; --border:#e6e9f2;
-  }
+  :root{--brand:#b30000;--deep:#880000;--ink:#111;--link:#003399;--bg:#fff;--soft:#f6f6f6;--edge:#d9d9d9}
   *{box-sizing:border-box}
-  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
-  /* Sticky header */
-  .topbar{position:sticky;top:0;z-index:50;background:#0b1220;color:#fff;border-bottom:1px solid #0f1a30}
-  .container{max-width:1100px;margin:auto;padding:0 14px}
-  .brand{display:flex;align-items:center;gap:12px;padding:14px 0}
-  .logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#1fa2ff,#12d8fa,#a6ffcb)}
-  .title{font-weight:800;letter-spacing:.5px}
-  .subtitle{font-size:12px;color:#bbd0ff}
-  /* hero */
-  .hero{background:linear-gradient(180deg,#00132b,#00244e);color:#fff;padding:22px 0 18px}
-  .hero h1{margin:4px 0 6px;font-size:28px;text-transform:uppercase}
-  .cta{display:flex;gap:10px;flex-wrap:wrap}
-  .btn{appearance:none;border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer}
-  .btn.pri{background:var(--pri);color:#fff}
-  .btn.pri:active{transform:translateY(1px)}
-  .btn.out{background:#13223b;color:#cfe0ff;border:1px solid #24406f}
-  /* nav tabs */
-  .tabs{display:flex;gap:8px;overflow:auto;padding:10px 0}
-  .tab{white-space:nowrap;background:#e9efff;color:#0b2a66;border:1px solid #cfe0ff;padding:8px 12px;border-radius:999px;cursor:pointer;font-weight:700}
-  .tab.active{background:var(--pri);color:#fff;border-color:var(--pri)}
-  /* search */
-  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
-  .search{flex:1;min-width:190px}
-  .search input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--border);outline:none}
-  .pill{padding:9px 12px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#333;font-weight:600}
-  /* grid cards */
-  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:0 4px 14px rgba(2,12,64,.04)}
-  .card .hd{padding:14px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;gap:8px}
-  .chip{font-size:12px;color:#004085;background:#d9ecff;padding:4px 8px;border-radius:8px}
-  .card .bd{padding:12px 14px}
-  .list{margin:0;padding-left:18px}
-  .list li{margin:6px 0}
-  .card .ft{padding:12px 14px;border-top:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap}
-  .mini{font-size:12px;color:var(--muted)}
-  .ok{color:var(--ok);font-weight:700}
-  /* accordion for full details */
-  .acc{border-top:1px dashed var(--border);margin-top:8px}
-  details{background:#fbfcff;border:1px solid var(--border);border-radius:12px;padding:0;margin:10px 0}
-  summary{list-style:none;padding:12px 14px;font-weight:800;cursor:pointer}
-  summary::-webkit-details-marker{display:none}
-  details[open] summary{border-bottom:1px solid var(--border);background:#f3f7ff}
-  .dwrap{padding:14px}
-  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden}
-  th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;font-size:14px}
-  th{background:#f6f8ff}
-  /* footer */
-  footer{margin-top:30px;background:#0b1220;color:#bcd2ff}
-  .links{display:flex;gap:10px;flex-wrap:wrap;padding:12px 0}
-  a{color:#0a55d6;text-decoration:none}
-  .btn.link{background:#eaf2ff;color:#0a55d6;border:1px solid #cfe0ff}
-  .yt{background:#ffebe9;color:#b42318;border-color:#ffd1cc}
-  .ig{background:#fff0fd;color:#b10084;border-color:#ffc9f2}
-  /* back to top */
-  #topBtn{position:fixed;right:14px;bottom:14px;border-radius:999px;padding:10px 14px;background:var(--pri);color:#fff;border:none;box-shadow:0 10px 24px rgba(10,108,241,.25);display:none}
-  /* make heading huge per your ask */
-  .mega{font-size:34px; font-weight:900; letter-spacing:1px}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Times New Roman", Georgia, serif}
+  .head{background:linear-gradient(#c41212,#a40d0d);color:#fff;text-align:center;padding:16px 10px;border-bottom:4px solid #5c0000;position:sticky;top:0;z-index:50}
+  .brand{font-size:40px;letter-spacing:1px;font-weight:700;text-transform:uppercase}
+  .tag{font-size:14px;opacity:.95;margin-top:4px}
+  .tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:10px;background:#fbe9e9;border-bottom:1px solid #e4bcbc}
+  .tab{padding:6px 10px;border:1px solid #cc7a7a;background:#fff;border-radius:3px;text-decoration:none;color:#900;font-weight:700;font-size:14px}
+  .tab.active{background:#ffe6e6}
+  .marq{background:#fff7d6;border-top:1px solid #e6d28a;border-bottom:1px solid #e6d28a;padding:6px 8px;font-weight:700}
+  .wrap{max-width:1100px;margin:14px auto;padding:0 10px}
+  .search{display:flex;gap:8px;align-items:center;margin:10px auto 14px;max-width:700px}
+  .search input{flex:1;padding:10px;border:2px solid var(--edge);border-radius:4px;font:16px "Times New Roman", Georgia, serif}
+  .search button{padding:10px 14px;border:2px solid var(--deep);background:var(--brand);color:#fff;font-weight:700;border-radius:4px}
+  .grid{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:980px){.grid{grid-template-columns:1fr 1fr}}
+  .panel{border:3px solid var(--deep);border-radius:4px;background:#fff;overflow:hidden;box-shadow:0 1px 0 #cfcfcf}
+  .panel .hd{background:var(--brand);color:#fff;text-align:center;font-weight:800;padding:10px;font-size:26px;letter-spacing:.5px}
+  .panel .bd{padding:8px 10px 12px}
+  ul.list{margin:0;padding:0 12px 8px 22px}
+  ul.list li{margin:8px 0}
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .pill{display:inline-block;margin-left:6px;padding:1px 7px;background:#eef3ff;border:1px solid #c9d9ff;border-radius:10px;font:12px/18px system-ui,Segoe UI,Arial,sans-serif;color:#2747b9}
+  .badge{color:#008a00;border:1px solid #aad3aa;background:#ecffec;border-radius:10px;padding:2px 8px;font:12px/18px system-ui}
+  .danger{color:#b30000;border-color:#f2c1c1;background:#fff1f1}
+  details{border:1px solid #e6e6e6;border-radius:6px;background:#fff;margin:10px 0}
+  details summary{cursor:pointer;padding:12px 12px;font-weight:700}
+  details .inside{padding:0 14px 12px}
+  .table{width:100%;border-collapse:collapse}
+  .table th,.table td{border:1px solid #ddd;padding:8px}
+  .table th{background:#f5f5f5;text-align:left}
+  footer{text-align:center;padding:18px 10px;margin-top:18px;border-top:4px solid var(--deep);background:#fafafa;font-weight:700}
 </style>
 </head>
 <body>
 
-<!-- Sticky header -->
-<div class="topbar">
-  <div class="container brand">
-    <div class="logo" aria-hidden="true"></div>
-    <div>
-      <div class="title mega">BHAWAN NANGALIYA</div>
-      <div class="subtitle">Mission Rojgar • Sarkari Jobs • Admit Card • Result • Yojana</div>
-    </div>
+<header class="head">
+  <div class="brand">BHAWAN NANGALIYA</div>
+  <div class="tag">Mission Rojgar • Sarkari Jobs • Admit Card • Result • Yojana</div>
+</header>
+
+<nav class="tabs">
+  <a class="tab active" href="#jobs">Latest Jobs</a>
+  <a class="tab" href="#admit">Admit Cards</a>
+  <a class="tab" href="#results">Results</a>
+  <a class="tab" href="#answer">Answer Keys</a>
+  <a class="tab" href="#syllabus">Syllabus</a>
+  <a class="tab" href="#schemes">Govt Schemes</a>
+</nav>
+
+<div class="marq">🔔 Official links included. Naye updates add karne ke liye neeche “DATA” arrays me item add karein.</div>
+
+<section class="wrap">
+  <div class="search">
+    <input id="q" type="search" placeholder="Search (e.g. IBPS, BSSC, Railway, Scholarship, Yojana)..." />
+    <button onclick="doSearch()">Search</button>
   </div>
-</div>
 
-<!-- Hero -->
-<div class="hero">
-  <div class="container">
-    <h1>Mission Rojgar – Sarkari Result Style Portal</h1>
-    <div class="cta">
-      <a class="btn pri" href="#jobs">🔥 Latest Jobs</a>
-      <a class="btn out" href="#schemes">🏛️ Govt Schemes</a>
-      <a class="btn out" href="#results">📊 Results</a>
-      <a class="btn out" href="#admit">🎫 Admit Cards</a>
-      <a class="btn out" href="#answer">📝 Answer Keys</a>
-    </div>
-
-    <div class="tabs" id="tabs">
-      <button class="tab active" data-target="jobs">Jobs</button>
-      <button class="tab" data-target="results">Results</button>
-      <button class="tab" data-target="admit">Admit Cards</button>
-      <button class="tab" data-target="answer">Answer Keys</button>
-      <button class="tab" data-target="schemes">Schemes</button>
-    </div>
-
-    <div class="toolbar container">
-      <div class="search"><input id="q" placeholder="🔎 Search job/scheme (e.g. IBPS, BSSC, Railway)"></div>
-      <div class="pill">✅ Official Links Included</div>
-      <div class="pill">📱 Mobile Friendly</div>
-    </div>
+  <div class="grid">
+    <div id="jobs" class="panel"><div class="hd">Latest Jobs</div><div class="bd"><ul class="list" id="list-jobs"></ul></div></div>
+    <div id="admit" class="panel"><div class="hd">Admit Cards</div><div class="bd"><ul class="list" id="list-admit"></ul></div></div>
+    <div id="results" class="panel"><div class="hd">Results</div><div class="bd"><ul class="list" id="list-results"></ul></div></div>
+    <div id="answer" class="panel"><div class="hd">Answer Keys</div><div class="bd"><ul class="list" id="list-keys"></ul></div></div>
+    <div id="syllabus" class="panel"><div class="hd">Syllabus</div><div class="bd"><ul class="list" id="list-syllabus"></ul></div></div>
+    <div id="schemes" class="panel"><div class="hd">Govt Schemes</div><div class="bd"><ul class="list" id="list-schemes"></ul></div></div>
   </div>
-</div>
 
-<!-- CONTENT -->
-<div class="container" id="content">
+  <div id="details"></div>
+</section>
 
-  <!-- JOBS -->
-  <section id="jobs" class="view">
-    <div class="grid" id="jobGrid">
-
-      <!-- JOB CARD — IBPS Clerk (example with full details) -->
-      <article class="card item" data-tags="ibps clerk bank 2025">
-        <div class="hd"><strong>IBPS Clerk XV Online Form 2025</strong><span class="chip">Last Date: 28 Aug 2025</span></div>
-        <div class="bd">
-          <ul class="list mini">
-            <li>Total Post: <b>10277</b></li>
-            <li>Qualification: Graduate</li>
-            <li>Age: 20–28 yrs (as on 01-08-2025)</li>
-          </ul>
-          <div class="acc">
-            <details>
-              <summary>📄 View Full Details, Dates, Fees, Eligibility</summary>
-              <div class="dwrap">
-                <h3>Important Dates</h3>
-                <table>
-                  <tr><th>Apply Start</th><td>01 Aug 2025</td></tr>
-                  <tr><th>Apply Last Date</th><td>28 Aug 2025</td></tr>
-                  <tr><th>Exam</th><td>Notify Later (IBPS)</td></tr>
-                </table>
-
-                <h3>Application Fee</h3>
-                <table>
-                  <tr><th>GEN/OBC/EWS</th><td>₹850/-</td></tr>
-                  <tr><th>SC/ST/PH</th><td>₹175/-</td></tr>
-                  <tr><th>Mode</th><td>Online (Debit/Credit/NetBanking/UPI)</td></tr>
-                </table>
-
-                <h3>Eligibility</h3>
-                <ul class="list">
-                  <li>Graduate in any discipline from recognized University.</li>
-                  <li>Computer knowledge desirable.</li>
-                </ul>
-
-                <h3>Vacancy (Category Wise)</h3>
-                <table>
-                  <tr><th>General</th><th>OBC</th><th>EWS</th><th>SC</th><th>ST</th></tr>
-                  <tr><td>4671</td><td>2271</td><td>972</td><td>1550</td><td>813</td></tr>
-                </table>
-
-                <p class="mini">📌 Source: Official IBPS notification. Check official website before applying.</p>
-
-                <p>
-                  <a class="btn link" href="https://www.ibps.in/" target="_blank">🌐 Official Website</a>
-                  <a class="btn pri" href="https://ibpsonline.ibps.in/" target="_blank">📝 Apply Online</a>
-                  <a class="btn out" href="#top">⬆️ Back to Top</a>
-                </p>
-              </div>
-            </details>
-          </div>
-        </div>
-        <div class="ft mini">Updated today • Bank Jobs • <span class="ok">Open</span></div>
-      </article>
-
-      <!-- JOB CARD — BSSC CGL -->
-      <article class="card item" data-tags="bssc cgl bihar 2025">
-        <div class="hd"><strong>BSSC CGL-4 Recruitment 2025</strong><span class="chip">Bihar</span></div>
-        <div class="bd mini">
-          <ul class="list">
-            <li>Graduate Level posts • Dept. wise</li>
-            <li>Last Date: <b>To be announced</b></li>
-          </ul>
-          <details class="acc">
-            <summary>📄 View Details & Official Links</summary>
-            <div class="dwrap">
-              <table>
-                <tr><th>Apply Start</th><td>—</td></tr>
-                <tr><th>Last Date</th><td>—</td></tr>
-                <tr><th>Fee</th><td>GEN/OBC ₹— • SC/ST ₹—</td></tr>
-              </table>
-              <p>
-                <a class="btn link" href="https://bssc.bihar.gov.in/" target="_blank">🌐 Official Website</a>
-                <a class="btn pri" href="https://bssc.bihar.gov.in/" target="_blank">📝 Apply (when active)</a>
-              </p>
-            </div>
-          </details>
-        </div>
-        <div class="ft mini">BSSC • Bihar</div>
-      </article>
-
-      <!-- JOB CARD — UP LT Teacher -->
-      <article class="card item" data-tags="up teacher lt grade 2025 education">
-        <div class="hd"><strong>UP LT Grade Teacher Recruitment 2025</strong><span class="chip">Education</span></div>
-        <div class="bd mini">
-          <ul class="list">
-            <li>Eligibility: B.Ed + Subject eligibility</li>
-            <li>Status: Notification awaited</li>
-          </ul>
-          <details class="acc">
-            <summary>📄 View Details & Official Links</summary>
-            <div class="dwrap">
-              <p>Dates & posts will be updated after official notice.</p>
-              <p>
-                <a class="btn link" href="https://uppsc.up.nic.in/" target="_blank">🌐 UPPSC Official</a>
-              </p>
-            </div>
-          </details>
-        </div>
-        <div class="ft mini">UP State • Teaching</div>
-      </article>
-
-      <!-- JOB CARD — SSC CPO -->
-      <article class="card item" data-tags="ssc cpo si delhi police 2025">
-        <div class="hd"><strong>SSC CPO SI 2025</strong><span class="chip">Police</span></div>
-        <div class="bd mini">
-          <ul class="list"><li>SI in Delhi Police & CAPFs</li><li>Tier-I: as per SSC calendar</li></ul>
-          <details class="acc">
-            <summary>📄 View Details & Official Links</summary>
-            <div class="dwrap">
-              <a class="btn link" href="https://ssc.gov.in/" target="_blank">🌐 SSC Official Website</a>
-              <a class="btn pri" href="https://ssc.gov.in/" target="_blank">📝 Apply (when active)</a>
-            </div>
-          </details>
-        </div>
-        <div class="ft mini">Central Govt</div>
-      </article>
-
-      <!-- JOB CARD — Railway RRB -->
-      <article class="card item" data-tags="railway rrb technician alp 2025">
-        <div class="hd"><strong>Railway RRB Technician / ALP 2025</strong><span class="chip">Railway</span></div>
-        <div class="bd mini">
-          <ul class="list"><li>Qualification: ITI/Diploma/Engg (post wise)</li><li>Status: Upcoming</li></ul>
-          <details class="acc">
-            <summary>📄 View Details & Official Links</summary>
-            <div class="dwrap">
-              <a class="btn link" href="https://indianrailways.gov.in/" target="_blank">🌐 Railway Portal</a>
-              <a class="btn link" href="https://rrbcdg.gov.in/" target="_blank">🌐 RRB Chandigarh</a>
-            </div>
-          </details>
-        </div>
-        <div class="ft mini">National</div>
-      </article>
-
-      <!-- JOB CARD — Agniveer -->
-      <article class="card item" data-tags="agniveer army 2025 defence">
-        <div class="hd"><strong>Indian Army Agniveer 2025</strong><span class="chip">Defence</span></div>
-        <div class="bd mini">
-          <ul class="list"><li>10th/12th pass (trade wise)</li><li>Age: 17.5–21 yrs</li></ul>
-          <details class="acc"><summary>📄 View Details & Official Links</summary>
-            <div class="dwrap">
-              <a class="btn link" href="https://joinindianarmy.nic.in/" target="_blank">🌐 Official Website</a>
-            </div>
-          </details>
-        </div>
-        <div class="ft mini">All India</div>
-      </article>
-
-      <!-- Add more cards quickly by duplicating this block and changing content -->
-      <article class="card item" data-tags="bank of baroda lbo 2025 admit">
-        <div class="hd"><strong>Bank of Baroda LBO Admit Card</strong><span class="chip">Admit</span></div>
-        <div class="bd mini">
-          <ul class="list"><li>Stage: Online exam</li><li>Status: Released</li></ul>
-          <details class="acc"><summary>📥 Download Admit Card</summary>
-            <div class="dwrap"><a class="btn pri" href="https://www.bankofbaroda.in/" target="_blank">🔗 Official Download</a></div>
-          </details>
-        </div>
-        <div class="ft mini">Banking</div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- RESULTS -->
-  <section id="results" class="view" hidden>
-    <div class="grid">
-      <article class="card item" data-tags="ssc jht result 2024">
-        <div class="hd"><strong>SSC JHT 2024 Marks / Result</strong><span class="chip">Result</span></div>
-        <div class="bd mini">
-          <p>SSC Junior Hindi Translator 2024 Result published.</p>
-          <a class="btn pri" target="_blank" href="https://ssc.gov.in/">🔗 Check Result</a>
-        </div>
-      </article>
-
-      <article class="card item" data-tags="rpf si final result railway">
-        <div class="hd"><strong>Railway RPF SI Final Result</strong><span class="chip">Result</span></div>
-        <div class="bd mini">
-          <a class="btn pri" target="_blank" href="https://rpf.indianrailways.gov.in/">🔗 RPF Portal</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ADMIT CARDS -->
-  <section id="admit" class="view" hidden>
-    <div class="grid">
-      <article class="card item" data-tags="upsssc pet exam city 2025">
-        <div class="hd"><strong>UPSSSC PET Exam City Details 2025</strong><span class="chip">Out</span></div>
-        <div class="bd mini"><a class="btn pri" target="_blank" href="https://upsssc.gov.in/">🔗 Download</a></div>
-      </article>
-      <article class="card item" data-tags="rrb ntpc admit city 2025">
-        <div class="hd"><strong>RRB NTPC 10+2 Level Admit Card / City</strong><span class="chip">Out</span></div>
-        <div class="bd mini"><a class="btn pri" target="_blank" href="https://rrbcdg.gov.in/">🔗 Download</a></div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ANSWER KEYS -->
-  <section id="answer" class="view" hidden>
-    <div class="grid">
-      <article class="card item" data-tags="dsssb answer key 2025">
-        <div class="hd"><strong>DSSSB Answer Key (May 2025)</strong><span class="chip">Out</span></div>
-        <div class="bd mini"><a class="btn pri" target="_blank" href="https://dsssb.delhi.gov.in/">🔗 Check</a></div>
-      </article>
-      <article class="card item" data-tags="bpsc mvi answer key">
-        <div class="hd"><strong>BPSC MVI Answer Key</strong><span class="chip">Out</span></div>
-        <div class="bd mini"><a class="btn pri" target="_blank" href="https://www.bpsc.bih.nic.in/">🔗 Check</a></div>
-      </article>
-    </div>
-  </section>
-
-  <!-- SCHEMES -->
-  <section id="schemes" class="view" hidden>
-    <div class="grid">
-      <article class="card item" data-tags="pm kisan scheme">
-        <div class="hd"><strong>PM-KISAN Samman Nidhi</strong><span class="chip">Govt Scheme</span></div>
-        <div class="bd mini">
-          <p>Installment status / beneficiary list.</p>
-          <a class="btn pri" target="_blank" href="https://pmkisan.gov.in/">🔗 Official Portal</a>
-        </div>
-      </article>
-
-      <article class="card item" data-tags="mgnrega job card">
-        <div class="hd"><strong>MGNREGA Job Card</strong><span class="chip">Scheme</span></div>
-        <div class="bd mini">
-          <a class="btn pri" target="_blank" href="https://nrega.nic.in/">🔗 Check List</a>
-        </div>
-      </article>
-
-      <article class="card item" data-tags="my scheme discovery">
-        <div class="hd"><strong>myScheme – Scheme Discovery</strong><span class="chip">Govt</span></div>
-        <div class="bd mini">
-          <a class="btn pri" target="_blank" href="https://www.myscheme.gov.in/">🔗 Browse All Schemes</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-</div>
-
-<!-- Footer -->
 <footer>
-  <div class="container">
-    <div class="links">
-      <a class="btn yt" target="_blank" href="https://youtube.com/@bhawan-missionrozgar?si=KsqPpqgRoqHg11ll">▶️ Join YouTube</a>
-      <a class="btn ig" target="_blank" href="https://www.instagram.com/bhawan_yaduvanshi30?igsh=MWE1dm5oN2UyNzBtNg==">📸 Follow Instagram</a>
-      <a class="btn out" href="#top">⬆️ Back to Top</a>
-    </div>
-    <p class="mini">© 2025 Bhawan Nangaliya – Mission Rojgar. All rights reserved.</p>
-  </div>
+  © 2025 BHAWAN NANGALIYA — Mission Rojgar. |
+  <a href="https://instagram.com/bhawan_yaduvanshi30" target="_blank">Instagram</a> •
+  <a href="https://youtube.com/@bhawan-missionrozgar" target="_blank">YouTube</a>
 </footer>
 
-<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️</button>
-
 <script>
-  // Tabs switching
-  const tabs = document.querySelectorAll('.tab');
-  const views = document.querySelectorAll('.view');
-  tabs.forEach(t=>{
-    t.addEventListener('click', ()=>{
-      tabs.forEach(x=>x.classList.remove('active'));
-      t.classList.add('active');
-      const id = t.dataset.target;
-      views.forEach(v=>v.hidden = v.id!==id);
-      location.hash = id;
-      window.scrollTo({top:0,behavior:'smooth'});
-    });
-  });
+/* ===========================
+   DATA (edit only this part)
+   =========================== */
 
-  // Search filter (across visible section)
-  const q = document.getElementById('q');
-  function filter(){
-    const v = q.value.toLowerCase().trim();
-    document.querySelectorAll('.view:not([hidden]) .item').forEach(it=>{
-      const ok = (it.dataset.tags||'').toLowerCase().includes(v) ||
-                 it.textContent.toLowerCase().includes(v);
-      it.style.display = ok ? '' : 'none';
-    });
+// JOBS (example 15+)
+const JOBS = [
+  {id:'ibps-clerk', title:'IBPS Clerk XV Online Form 2025', tag:'Bank', last:'28 Aug 2025', status:'Open',
+    details:{
+      rows:[
+        ['Application Begin','01 Aug 2025'],
+        ['Last Date','28 Aug 2025'],
+        ['Age','20–28 years (as on 01-08-2025)'],
+        ['Total Post','10277'],
+        ['Qualification','Graduate'],
+        ['Fee','UR/OBC/EWS ₹850 • SC/ST ₹175 • Online']
+      ],
+      links:[
+        ['Official Website','https://ibps.in'],
+        ['Apply Online','#'],
+        ['Notification','#'],
+        ['Syllabus','#']
+      ]
+    }
+  },
+  {id:'bssc-cgl', title:'BSSC CGL-4 Recruitment 2025', tag:'Bihar', last:'TBA', status:'Upcoming',
+    details:{
+      rows:[
+        ['State','Bihar'],['Status','To be announced'],['Qualification','Graduate Level Posts (Dept-wise)']
+      ],
+      links:[['Official Website','https://bssc.bihar.gov.in/'],['Notification','#']]
+    }
+  },
+  {id:'ssc-mts', title:'SSC MTS / Havaldar 2025', tag:'Central', last:'TBA', status:'Upcoming',
+    details:{rows:[['Commission','SSC'],['Qualification','10th Pass'],['Status','Apply Soon']],links:[['Official Website','https://ssc.gov.in']]}
+  },
+  {id:'rrb-tech', title:'Railway RRB Technician 2025', tag:'Railway', last:'TBA', status:'Upcoming',
+    details:{rows:[['Board','Railway Recruitment Board'],['Qualification','ITI/Diploma'],['Status','Expected']],links:[['RRB (Chandigarh Portal)','https://rrbcdg.gov.in/']]}
+  },
+  {id:'upsssc-lekpal', title:'UPSSSC Lekhpal 2025', tag:'UP', last:'TBA', status:'Upcoming',
+    details:{rows:[['Board','UPSSSC'],['Qualification','12th/Graduate (as per notice)']],links:[['Official Website','https://upsssc.gov.in/']]}
+  },
+  {id:'fci-ag3', title:'FCI Assistant Grade III 2025', tag:'FCI', last:'TBA', status:'Upcoming',
+    details:{rows:[['Org','Food Corporation of India'],['Qualification','Graduate + Computer']],links:[['Official','https://fci.gov.in/']]}
+  },
+  {id:'india-post-gds', title:'India Post GDS 2025', tag:'Postal', last:'TBA', status:'Upcoming',
+    details:{rows:[['Org','Department of Posts'],['Qualification','10th Pass']],links:[['Official GDS','https://indiapostgdsonline.gov.in/']]}
+  },
+  {id:'army-agniveer', title:'Indian Army Agniveer 2025', tag:'Defence', last:'TBA', status:'Upcoming',
+    details:{rows:[['Force','Indian Army'],['Mode','Online']],links:[['Join Indian Army','https://joinindianarmy.nic.in/']]}
+  },
+  {id:'airforce-agniveer', title:'Air Force Agniveer Vayu 2025', tag:'Defence', last:'TBA', status:'Upcoming',
+    details:{rows:[['Force','IAF'],['Age','As per notice']],links:[['Agnipath IAF','https://agnipathvayu.cdac.in/']]}
+  },
+  {id:'navy-ssr', title:'Indian Navy SSR/MR 2025', tag:'Navy', last:'TBA', status:'Upcoming',
+    details:{rows:[['Force','Indian Navy']],links:[['Join Navy','https://www.joinindiannavy.gov.in/']]}
+  },
+  {id:'state-police', title:'Rajasthan Police Constable 2025', tag:'Rajasthan', last:'TBA', status:'Upcoming',
+    details:{rows:[['Dept','Rajasthan Police']],links:[['Police Portal','https://www.police.rajasthan.gov.in/']]}
+  },
+  {id:'ibps-po', title:'IBPS PO XV 2025', tag:'Bank', last:'TBA', status:'Upcoming',
+    details:{rows:[['Organisation','IBPS'],['Qualification','Graduate']],links:[['Official','https://ibps.in']]}
+  },
+  {id:'sbi-clerk', title:'SBI Clerk 2025', tag:'Bank', last:'TBA', status:'Upcoming',
+    details:{rows:[['Bank','SBI'],['Qualification','Graduate']],links:[['SBI Careers','https://sbi.co.in/web/careers']]}
+  },
+  {id:'upsc-epfo', title:'UPSC EPFO/EO 2025', tag:'UPSC', last:'TBA', status:'Upcoming',
+    details:{rows:[['Commission','UPSC']],links:[['UPSC Online','https://upsconline.nic.in/']]}
+  },
+  {id:'ctet', title:'CTET 2025', tag:'Teaching', last:'TBA', status:'Upcoming',
+    details:{rows:[['Board','CBSE']],links:[['CTET','https://ctet.nic.in/']]}
   }
-  q.addEventListener('input', filter);
+];
 
-  // Back to top visibility
-  const topBtn = document.getElementById('topBtn');
-  addEventListener('scroll', ()=>{
-    topBtn.style.display = window.scrollY>600 ? 'inline-flex':'none';
+// ADMIT CARDS
+const ADMITS = [
+  ['UPSSSC PET Exam City Details 2025 – Out','https://upsssc.gov.in/'],
+  ['RRB NTPC/Level Exam City – Out','https://rrbcdg.gov.in/'],
+  ['Bank Of Baroda LBO Admit Card 2025 – Out','https://www.bankofbaroda.in/'],
+  ['SSC Phase-13 Re-Exam Admit Card 2025 – Out','https://ssc.gov.in/'],
+  ['AIIMS CRE Group B,C Admit Card 2025 – Out','https://www.aiimsexams.ac.in/']
+];
+
+// RESULTS
+const RESULTS = [
+  ['SSC JHT 2024 Marks – Out','#'],
+  ['Railway RPF SI Final Result 2025 – Out','#'],
+  ['BSPHCL Assistant Engineer GTO Result 2025 – Out','#'],
+  ['BCECE 2025 2nd Round Allotment – Out','#'],
+  ['RSMSSB LDC/Junior Assistant Result – Out','#']
+];
+
+// ANSWER KEYS
+const ANSWERS = [
+  ['BPSC MVI Answer Key 2025 – Out','https://www.bpsc.bih.nic.in/'],
+  ['BPSC DSO/AD Answer Key 2025 – Out','https://www.bpsc.bih.nic.in/'],
+  ['DSSSB 05–14 Aug Answer Key 2025 – Out','https://dsssb.delhi.gov.in/'],
+  ['JPSC ACF Pre Revised Answer Key 2025 – Out','https://www.jpsc.gov.in/']
+];
+
+// SYLLABUS
+const SYLLABUS = [
+  ['SSC CPO SI Paper-I Syllabus 2025','#'],
+  ['IBPS Clerk Syllabus 2025 (Pre + Main)','#'],
+  ['Rajasthan Patwari Syllabus 2025','#'],
+  ['UP Police SI Syllabus 2025','#']
+];
+
+// SCHEMES (official)
+const SCHEMES = [
+  ['PM-KISAN','https://pmkisan.gov.in/'],
+  ['National Career Service (NCS)','https://www.ncs.gov.in/'],
+  ['MNREGA','https://mnrega.nic.in/'],
+  ['National Scholarship Portal','https://scholarships.gov.in/'],
+  ['e-Shram','https://eshram.gov.in/'],
+  ['PM SVANidhi','https://pmsvanidhi.mohua.gov.in/']
+];
+
+/* ===========================
+   RENDER
+   =========================== */
+
+const el = s=>document.querySelector(s);
+
+function renderLists(){
+  // Jobs
+  const ulJ = el('#list-jobs'); ulJ.innerHTML = '';
+  JOBS.forEach(j=>{
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="#${j.id}" onclick="openDetails('${j.id}')">${j.title}</a>
+      <span class="pill">${j.tag}</span>
+      <span class="pill">Last: ${j.last}</span>
+      <span class="badge ${/Open/i.test(j.status)?'':'danger'}">${j.status}</span>`;
+    ulJ.appendChild(li);
+
+    // details block
+    const det = document.createElement('details');
+    det.id = j.id;
+    const rows = (j.details?.rows||[]).map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join('');
+    const links = (j.details?.links||[]).map(l=>`<li>👉 <a href="${l[1]}" target="_blank">${l[0]}</a></li>`).join('');
+    det.innerHTML = `<summary>${j.title}: Full Details (click to open)</summary>
+      <div class="inside">
+        <table class="table">${rows}</table>
+        ${links?`<p><b>Important Links:</b></p><ul class="list">${links}</ul>`:''}
+      </div>`;
+    el('#details').appendChild(det);
   });
 
-  // Deep link by hash on load
-  const hash = location.hash.replace('#','');
-  if(hash){ const t=[...tabs].find(x=>x.dataset.target===hash); if(t) t.click(); }
+  // Other lists
+  fillSimple('#list-admit', ADMITS);
+  fillSimple('#list-results', RESULTS);
+  fillSimple('#list-keys', ANSWERS);
+  fillSimple('#list-syllabus', SYLLABUS);
+  fillSimple('#list-schemes', SCHEMES, true);
+}
+function fillSimple(sel, arr, blankTarget){
+  const ul = el(sel); ul.innerHTML='';
+  arr.forEach(([text,href='#'])=>{
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="${href}" ${blankTarget?'target="_blank"':''}>${text}</a>`;
+    ul.appendChild(li);
+  });
+}
 
-  // Helper: easily duplicate a job card — just copy an <article class="card item"> block.
+function doSearch(){
+  const q = el('#q').value.trim().toLowerCase();
+  ['list-jobs','list-admit','list-results','list-keys','list-syllabus','list-schemes']
+    .forEach(id=>{
+      document.querySelectorAll('#'+id+' li').forEach(li=>{
+        const hit = li.innerText.toLowerCase().includes(q);
+        li.style.display = (q==='' || hit) ? '' : 'none';
+      });
+    });
+  if(q!==''){ location.hash = '#jobs'; }
+}
+
+function openDetails(id){
+  const d = document.getElementById(id);
+  if(d){ d.open = true; setTimeout(()=>d.scrollIntoView({behavior:'smooth',block:'start'}),50); }
+}
+
+const sections = ['jobs','admit','results','answer','syllabus','schemes'];
+window.addEventListener('scroll',()=>{
+  let current = sections[0];
+  sections.forEach(id=>{
+    const elx = document.getElementById(id);
+    if(elx && elx.getBoundingClientRect().top < 140) current = id;
+  });
+  document.querySelectorAll('.tab').forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+current));
+});
+
+renderLists();
 </script>
 
 </body>
